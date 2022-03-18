@@ -1,0 +1,6 @@
+insert into final_notas
+select
+	"CHAVE DE ACESSO",modelo,série,número,"NATUREZA DA OPERAÇÃO",to_date("DATA EMISSÃO", 'DD/MM/YYYY'),"CPF/CNPJ Emitente","RAZÃO SOCIAL EMITENTE","INSCRIÇÃO ESTADUAL EMITENTE","UF EMITENTE","MUNICÍPIO EMITENTE","CNPJ DESTINATÁRIO","NOME DESTINATÁRIO","UF DESTINATÁRIO","INDICADOR IE DESTINATÁRIO","DESTINO DA OPERAÇÃO","CONSUMIDOR FINAL","PRESENÇA DO COMPRADOR","NÚMERO PRODUTO","DESCRIÇÃO DO PRODUTO/SERVIÇO","CÓDIGO NCM/SH","NCM/SH (TIPO DE PRODUTO)",cfop,quantidade,unidade,cast(replace("VALOR UNITÁRIO", ',', '.') as decimal(11,2)),cast(replace("VALOR TOTAL", ',', '.') as decimal(11,2))
+from tmp_notas;
+
+
